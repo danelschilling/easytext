@@ -1,4 +1,4 @@
-package br.com.ifsul.easytext.model;
+package br.com.ifsul.easytext.models;
 
 
 public class Usuario {
