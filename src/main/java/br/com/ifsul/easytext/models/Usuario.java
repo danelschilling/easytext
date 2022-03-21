@@ -7,23 +7,25 @@ public class Usuario {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUsuario;
+
+	@Column(nullable = false)
 	private String nomeUsuario;
+
+	@Column(nullable = false)
 	private String email;
+
+	@Column(nullable = false)
 	private String senha;
+
 	private Integer pontuacaoUsuario;
 
 	@ManyToOne
-	private Licao licao;
+	private Nivel nivel;
 
 
 	public Usuario() {
 	}
 
-	public Usuario(String nomeUsuario, String email, Licao licao) {
-		this.nomeUsuario = nomeUsuario;
-		this.email = email;
-		this.licao = licao;
-	}
 
 	public Long getIdUsuario() {
 
@@ -65,15 +67,6 @@ public class Usuario {
 
 		this.pontuacaoUsuario = pontuacaoUsuario;
 	}
-	
-	public Licao getLicao() {
 
-		return licao;
-	}
-
-	public void setLicao(Licao licao) {
-
-		this.licao = licao;
-	}
 
 }

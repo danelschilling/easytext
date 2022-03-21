@@ -17,11 +17,6 @@ public class Licao {
 	public Licao() {
 	}
 
-	public Licao(String modulo, String dificuldade) {
-		this.modulo = modulo;
-		this.dificuldade = dificuldade;
-	}
-
 	public Long getIdLicao() {
 
 		return idLicao;

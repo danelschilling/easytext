@@ -1,9 +1,6 @@
 package br.com.ifsul.easytext.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Questao {
@@ -11,13 +8,24 @@ public class Questao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idQuestao;
+
+	@Column(nullable = false)
 	private String descricao;
+
 	private String enunciado;
+
+	@Column(nullable = false)
 	private String opcaoQuestao;
-	private Integer pontoQuestao;
+
+	@Column(nullable = false)
 	private String respostaCerta;
-	
-	
+
+	@ManyToOne
+	private Licao licao;
+
+	private Integer pontoQuestao;
+
+
 	public Long getIdQuestao() {
 
 		return idQuestao;
