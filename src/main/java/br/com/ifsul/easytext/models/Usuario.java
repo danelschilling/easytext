@@ -26,6 +26,14 @@ public class Usuario {
 	public Usuario() {
 	}
 
+	public Usuario(String nome, String email, String senha) {
+	}
+
+	public Usuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
+		this.email = email;
+		this.senha = senha;
+	}
 
 	public Long getIdUsuario() {
 
