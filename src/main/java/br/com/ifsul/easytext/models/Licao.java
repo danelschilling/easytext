@@ -1,16 +1,27 @@
 package br.com.ifsul.easytext.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Licao {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idLicao;
 	private String modulo;
 	private String dificuldade;
-	
+
+	public Licao() {
+	}
+
 	public Licao(String modulo, String dificuldade) {
 		this.modulo = modulo;
 		this.dificuldade = dificuldade;
 	}
-	
+
 	public Long getIdLicao() {
 
 		return idLicao;

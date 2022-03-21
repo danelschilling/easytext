@@ -1,22 +1,30 @@
 package br.com.ifsul.easytext.models;
 
+import javax.persistence.*;
 
+@Entity
 public class Usuario {
-	
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUsuario;
 	private String nomeUsuario;
 	private String email;
 	private String senha;
 	private Integer pontuacaoUsuario;
+
+	@ManyToOne
 	private Licao licao;
-	
+
+
+	public Usuario() {
+	}
 
 	public Usuario(String nomeUsuario, String email, Licao licao) {
 		this.nomeUsuario = nomeUsuario;
 		this.email = email;
 		this.licao = licao;
 	}
-	
+
 	public Long getIdUsuario() {
 
 		return idUsuario;
