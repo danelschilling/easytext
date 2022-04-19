@@ -1,0 +1,20 @@
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.security: DEBUG
+server:
+  error:
+    include-message: always
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/easyText
+    username: postgres
+    password: 12345
+  jpa:
+    hibernate:
+       ddl-auto: create-drop
+      # ddl-auto: validate
+      # ddl-auto: update
+  session:
+    store-type: jdbc
